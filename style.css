@@ -10,23 +10,67 @@
 
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background: var(--bg-color);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+section.form{
+    display: flex;
+    justify-content: center;
 }
 
 #form{
     background: var(--form-color);
     color: var(--form-text-color);
     padding: 2rem;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
 }
+
 
 label {
     font-size: 1.25rem;
 }
+input{
+    margin-bottom: .5rem;
+}
 
+#submit{
+    background: black;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    padding: 1rem;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+#submit:hover{
+    background: rgb(49, 49, 49);
+    transition: .5s ease;
+}
 .cards{
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
+    justify-content: center;    
 }
 .item{
     background: var(--card-color);
@@ -34,6 +78,7 @@ label {
     margin: 1.25rem;
     padding: .625rem ;
     border-radius: 4px;
+    position: relative;
 
 }
 
@@ -42,6 +87,12 @@ label {
     margin: 0 auto;
 }
 
+.item:hover{
+    /* transform: translateY(-10px);
+    transition: .3s ease-out; */
+    animation: move .2s ease-in-out;
+       
+}
 img{
     width: 200px;
     height: 200px;
@@ -49,4 +100,78 @@ img{
     border-bottom: 1px solid var(--bg-color);
 }
 
+.type{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: .25rem;
+    padding: .25rem .5rem;
+    color: white;
 
+}
+
+#Normal{
+    background: #a4acaf;        
+}
+#Fogo{
+    background:#fd7d24;       
+}
+#Agua{
+    background: #4592c4;        
+}
+#Grama{
+    background: #9bcc50;        
+}
+#Voador{
+    background:#d1cebd;       
+}
+#Eletrico{
+    background:#eed535;       
+}
+#Terra{
+    background:#ab9842;       
+}
+#Pedra{
+    background:#a38c21;       
+}
+#Psiquico{
+    background:#f366b9;       
+}
+#Gelo{
+    background:#51c4e7;       
+}
+#Inseto{
+    background:#729f3f;       
+}
+#Fantasma{
+    background:#7b62a3;       
+}
+#Ferro{
+    background:#9eb7b8;       
+}
+#Dragão{
+    background:#f16e57;       
+}
+#Sombrio{
+    background:#707070;       
+}
+#Fada{
+    background:#fdb9e9;       
+}
+
+
+@keyframes move {
+    from {transform: translateY(0);}
+    to {transform: translateY(-10px);}
+}
+
+@media screen and (max-width: 1000px) {
+   
+    #form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    
+    }
+}

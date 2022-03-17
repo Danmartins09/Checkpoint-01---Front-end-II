@@ -6,6 +6,7 @@ form.addEventListener('submit', function(e) {
     var name = document.getElementById('name').value;
     var image = document.getElementById('image').value;
     var description = document.getElementById('description').value;
+    var type = document.getElementById('type').value;
     console.log(name);
     console.log(image);
     console.log(description);
@@ -16,6 +17,7 @@ form.addEventListener('submit', function(e) {
     <h2>${name}</h2>
     <img src="${image}">
     <p>${description}</p>
+    <p class="type" id="${type}">${type}</p>
     </div>`;
     
     title.innerHTML = title.innerHTML + card;
