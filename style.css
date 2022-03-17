@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+    --card-color:#ffffff;
+    --bg-color:rgb(240, 239, 239);
+    --form-color:#c20001;
+    --form-text-color:#ffffff;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    background: var(--bg-color);
+}
+
+#form{
+    background: var(--form-color);
+    color: var(--form-text-color);
+    padding: 2rem;
+}
+
+label {
+    font-size: 1.25rem;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;    
+}
+.item{
+    background: var(--card-color);
+    width: 300px;
+    margin: 1.25rem;
+    padding: .625rem ;
+    border-radius: 4px;
+
+}
+
+.item img{
+    display: flex;
+    margin: 0 auto;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-bottom: 1px solid var(--bg-color);
+}
+
+
