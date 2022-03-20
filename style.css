@@ -37,7 +37,7 @@ header{
     height: 100%;
     z-index: -1;
     opacity: 5%;
-    background-image: url(Assets/Pokeball-PNG-Free-Download.png);
+    background-image: url(/Assets/Pokeball-PNG-Free-Download.png);
     background-repeat: repeat;    
     background-size: 100px;    
 }
