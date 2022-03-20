@@ -1,4 +1,5 @@
 const form = document.querySelector("#form");
+const removerCard = document.querySelector("#remove");
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -7,16 +8,13 @@ form.addEventListener('submit', function(e) {
     var image = document.getElementById('image').value;
     var description = document.getElementById('description').value;
     var type = document.getElementById('type').value;
-    console.log(name);
-    console.log(image);
-    console.log(description);
     
     const title = document.getElementById('cards');
 
     let card = `<div class = "item">
     <h2>${name}</h2>
     <img src="${image}">
-    <p>${description}</p>
+    <p class="text">${description}</p>
     <p class="type" id="${type}">${type}</p>
     </div>`;
     
@@ -24,6 +22,16 @@ form.addEventListener('submit', function(e) {
     form.reset();
 
 })
+
+removerCard.addEventListener('click', function(e){
+    
+const title = document.querySelectorAll('#cards .item');
+const ultimoItem = title.length -1;
+title[ultimoItem].remove() 
+
+})
+
+
 
 
 
